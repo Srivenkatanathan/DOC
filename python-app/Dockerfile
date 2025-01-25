@@ -1,14 +1,11 @@
-FROM ubuntu 
-WORKDIR /application 
+FROM ubuntu
 
-COPY requirements.txt /application
+WORKDIR /app
 
-COPY devops/ /application
+COPY requirements.txt /app/
+COPY devops /app/
 
-RUN apt-get update && \
-    apt-get install python3 python3-pip && \
-    pip install -r requirement.txt && \
-    cd devops
+RUN apt-get update && apt-get install -y python3 python3-pip python3-venv
 
 SHELL ["/bin/bash", "-c"]
 
