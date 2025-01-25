@@ -11,4 +11,4 @@ RUN apt-get update && \
     cd devops \\ installing packages and requirement.txt file and cd to devops
 
 ENTRYPOINT ["python3"]  \\this can't be changed
-CMD ["manage.py","runserver","8000"] \\executing \ running manage.py on 8000 server
+CMD ["manage.py","runserver","0.0.0.0:8000"] \\executing \ running manage.py on 8000 server
